@@ -1,3 +1,6 @@
+In this second part of the exercise, we will go a step futher to explore the use of aggregate statements such ```GROUP BY``` , ```HAVING```  and  ```JOIN``` statement to solve challenges.
+
+
 ## 6. You'd like to get the signup date of your last member. How can you retrieve this information?
 
 ```sql
