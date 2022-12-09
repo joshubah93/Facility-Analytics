@@ -1,3 +1,5 @@
+This exercise is designed to explore some typical scenario challenges that faces a facility management business. We are starting from the fundamental statements such as ```SELECT``` , ```WHERE``` , ```ORDER BY``` , ```LIMIT``` and answer questions concerning ```members``` , ```booking``` , ```facilities```.
+
 ## 1. How can you retrieve all the information from the cd.facilities table?
 
 ```sql
