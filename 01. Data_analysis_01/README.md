@@ -23,8 +23,11 @@ FROM cd.facilities;
 
 ## 2. You want to print out a list of all of the facilities and their cost to members. How would you retrieve a list of only facility names and costs?
 
+```sql
 SELECT name, membercost 
 FROM cd.facilities;
+```
+
 *Output:*
 
 |name|	membercost|
@@ -39,33 +42,43 @@ FROM cd.facilities;
 |Snooker Table|	0|
 |Pool Table|	0|
 
+
+
 ## 3. How can you produce a list of facilities that charge a fee to members, and that fee is less than 1/50th of the monthly maintenance cost? Return the facid, facility name, member cost, and monthly maintenance of the facilities in question.
 
+
+```sql
 SELECT facid, name, membercost, monthlymaintenance
 FROM cd.facilities
 WHERE membercost > 0 
 AND (membercost < monthlymaintenance/50.0);
+```
+
 
 *Output:*
 
 |facid	|name|	membercost	|monthlymaintenance|
-|:------------:|:------------:|:-------------------:|:------------------------:|
+|:---------:|:--------:|:-----------:|:---------------:|
 |4|	Massage Room 1	|35|	3000|
 |5|	Massage Room 2	|35|	3000|
 
 
+
 ## 4. How can you produce a list of members who joined after the start of September 2012? Return the memid, surname, firstname, and joindate of the members in question.
 
+
+```sql
 SELECT memid, surname, firstname, joindate 
 FROM cd.members 
 WHERE joindate >= '2012-09-01';
+```
+
 
 *Output:*
 
 
-
 |memid	|surname|	firstname|	joindate|
-|:------------:|:-----------------:|:------------------------:|:------------------:|
+|:--------:|:--------------:|:-----------:|:-----------:|
 |24|	Sarwin	|Ramnaresh	|2012-09-01 08:44:42|
 |26|	Jones	|Douglas|	2012-09-02 18:43:05|
 |27|	Rumney|	Henrietta|	2012-09-05 08:42:35|
@@ -78,15 +91,19 @@ WHERE joindate >= '2012-09-01';
 |37|	Smith	|Darren|	2012-09-26 18:08:45|
 
 
+
 ## 5. How can you produce an ordered list of the first 10 surnames in the members table? The list must not contain duplicates.
 
-
+```sql
 SELECT DISTINCT surname 
 FROM cd.members
 ORDER BY surname 
 LIMIT 10;
+```
+
 
 *Output:*
+
 
 |surname|
 |:----------:|
