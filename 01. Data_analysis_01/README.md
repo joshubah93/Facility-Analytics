@@ -1,7 +1,9 @@
 ## 1. How can you retrieve all the information from the cd.facilities table?
 
+```sql
 SELECT * 
 FROM cd.facilities; 
+```
 
 *Output:*
 
